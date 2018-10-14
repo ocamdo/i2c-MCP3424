@@ -36,6 +36,7 @@ int main(int argc, char** argv)
     if (!bcm2835_init())
         return 1;
 
+    // Clock divider (however not used yet)
     bcm2835_i2c_setClockDivider(BCM2835_I2C_CLOCK_DIVIDER_626);
     // i2c set-up start
     bcm2835_i2c_begin();
@@ -49,8 +50,7 @@ int main(int argc, char** argv)
         bcm2835_i2c_write(chan, 1);
         delay(100);                                  // 100ms delay
 
-        // Check that status is 0 and read the conversion
-        unsigned int status = bcm2835_i2c_read(buf, 3) != BCM2835_I2C_REASON_OK;
+        unsigned int status = bcm2835_i2c_read(buf, 3) != BCM2835_I2C_REASON_OK; // Check that status is 0 and read the conversion
         if( status )
         {
                 printf("Status: 1 error! \n");      // Exit if status is not 0
@@ -58,7 +58,7 @@ int main(int argc, char** argv)
         }
         else
         {
-        // Check MSB & LSB and calculate the voltage
+                // Check MSB & LSB and calculate the voltage and use different gains (PGA)
                 for (int g = 0; g < 4; g ++)
                 {
                         delay(100);

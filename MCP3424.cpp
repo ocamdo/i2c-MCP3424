@@ -53,8 +53,7 @@ int main(int argc, char** argv)
         unsigned int status = bcm2835_i2c_read(buf, 3) != BCM2835_I2C_REASON_OK;
         if( status )
         {
-                // Exit if status is not 0
-                printf("Status: 1 error! \n");
+                printf("Status: 1 error! \n");      // Exit if status is not 0
                 bcm2835_i2c_end();
         }
         else

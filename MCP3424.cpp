@@ -10,6 +10,7 @@
 //             SCL  -> SCL (GPIO 5)
 //             GND  -> GND (GPIO 7 or any GND pin)
 // Voltage on input pins must be < 2.048V
+// Resolution used is 12 bits
 // Configuration used: R/Channel/O-S-C=0/12 bits=00/PGA-1=00
 //                              0x80 = 1/00/0/00/00
 //                              0xA0 = 1/01/0/00/00

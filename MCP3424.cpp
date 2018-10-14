@@ -2,7 +2,7 @@
 // Author: Daniel Ocampo
 // Version: 1.0
 // Date: 23-Sep-2018
-// Description: Reading data from i2c MCP3424
+// Description: Reading data from i2c MCP3424 in Raspberry Pi
 // IC: MCP3424 i2c (4 channles)
 // Wiring:   Sensor     RPi
 //             VDD  -> VDD (GPIO 1 : 3.3v)

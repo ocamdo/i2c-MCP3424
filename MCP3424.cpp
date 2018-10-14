@@ -1,4 +1,4 @@
-// Program: wl.cpp
+// Program: mcp3424.cpp
 // Author: Daniel Ocampo
 // Version: 1.0
 // Date: 23-Sep-2018
@@ -16,7 +16,7 @@
 //                              0xA0 = 1/01/0/00/00
 //                              0xC0 = 1/10/0/00/00
 //                              0xE0 = 1/11/0/00/00
-// Ccompiling: g++ wl.cpp -o wl -lbcm2835
+// Ccompiling: g++ mcp3424.cpp -o wl -lbcm2835
 //
 
 #include <stdio.h>
